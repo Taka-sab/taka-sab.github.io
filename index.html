@@ -15,33 +15,11 @@
   <li><a href="https://afdian.net/@sdgundam" target="_blank">赞助我们 ( Donate )</a></li>
   <li><a href="https://afdian.net/p/f23f26462e7a11e9b70f52540025c377" target="_blank">下载软件 ( Download )</a></li>
   <li><a href="https://afdian.net/p/94b029b02e7c11e98e6f52540025c377" target="_blank">BUG&建议反馈</a></li>
-  <li><a href="https://docs.qq.com/sheet/DUGNjQ2tTTkpCUERW" target="_blank">查询颜色代码</a></li>
+  <li><a href="color.html" target="_blank">查询颜色代码</a></li>
   <li><a href="https://sdplayer.club" target="_blank">前往玩家要塞查询机体代码</a></li>
   </br>
   <script type="text/javascript" src="https://s23.cnzz.com/z_stat.php?id=1276115331&web_id=1276115331"></script>
   </ul>
   </div>
-<li>
-<input type="color" name="color" id="color" onchange="changeColor()">
-<span id="colorInfo"></span>
-<script type="text/javascript">
-var color = document.getElementById("color");
-var colorInfo = document.getElementById("colorInfo");
-colorInfo.style.color = color.value;
-function changeColor(){
-//colorInfo.style.color = color.value;
-var x = document.getElementById("color").value;
-x = x.substring(1)
-var a = parseInt(x,16)
-var r = (((a&0xff0000)>>16)>>3)<<10;
-var g = (((a&0xff00)>>8)>>3)<<5;
-var b = (((a&0xff))>>3);
-r = r|g|b
-var hexstr = r.toString(16)
-var len = hexstr.length
-for(var i = 1;i<=4-len;i++) hexstr = "0"+hexstr
-colorInfo.innerHTML = ""+hexstr.charAt(2)+hexstr.charAt(3)+hexstr.charAt(0)+hexstr.charAt(1); 
-}
-</script></li>
 </body>
 </html>
