@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>select color</title>
+</head>
+<body>
+<input type="color" name="color" id="color" onchange="changeColor()">
+<span id="colorInfo"></span>
+</body>
+<script type="text/javascript">
+var color = document.getElementById("color");
+var colorInfo = document.getElementById("colorInfo");
+colorInfo.style.color = color.value;
+function changeColor(){
+//colorInfo.style.color = color.value;
+var x = document.getElementById("color").value;
+x = x.substring(1)
+var a = parseInt(x,16)
+var r = (((a&0xff0000)>>16)>>3)<<10;
+var g = (((a&0xff00)>>8)>>3)<<5;
+var b = (((a&0xff))>>3);
+r = r|g|b
+var hexstr = r.toString(16)
+var len = hexstr.length
+for(var i = 1;i<=4-len;i++) hexstr = "0"+hexstr
+colorInfo.innerHTML = ""+hexstr.charAt(2)+hexstr.charAt(3)+hexstr.charAt(0)+hexstr.charAt(1); 
+}
+</script>
+</html>
