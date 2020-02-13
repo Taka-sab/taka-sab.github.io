@@ -1,8 +1,8 @@
-﻿Region List
+Region List
 0.99
 Client Ver 1.5.74
 List1
-宝可梦线路1
+กะเพราไก่ไข่ดาว
 103.91.206.119 4002
 #
 List1 end
