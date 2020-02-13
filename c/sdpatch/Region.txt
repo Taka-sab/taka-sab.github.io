@@ -3,7 +3,7 @@ Region List
 Client Ver 1.5.74
 List1
 宝可达普通线路1
-47.100.95.180 10001
+47.100.95.180 10000
 #
 List1 end
 List2
